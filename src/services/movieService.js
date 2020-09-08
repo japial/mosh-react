@@ -7,7 +7,8 @@ const movies = [
         "year": 1900,
         "numberInStock": 5, 
         "dailyRate": 2.5, 
-        "genre": {_id: 1, name: 'Action'} 
+        "genre": {_id: 1, name: 'Action'},
+        'liked': true
     },
     { 
         "_id": '6234034',
@@ -31,7 +32,8 @@ const movies = [
         "year": 1987,
         "numberInStock": 2, 
         "dailyRate": 1.5, 
-        "genre": {_id: 3, name: 'Animated'} 
+        "genre": {_id: 3, name: 'Animated'},
+        'liked': true
     },
     { 
         "_id": '54317361',
@@ -47,7 +49,8 @@ const movies = [
         "year": 1900,
         "numberInStock": 5, 
         "dailyRate": 2.5, 
-        "genre": {_id: 1, name: 'Action'} 
+        "genre": {_id: 1, name: 'Action'},
+        'liked': true 
     },
     { 
         "_id": '4362421341',
