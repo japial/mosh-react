@@ -1,5 +1,3 @@
-import * as genreApi from "./geners"
-
 const movies = [
     { 
         "_id": '13131231',
