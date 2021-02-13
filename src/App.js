@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/home';
 import Movies from './components/movies';
+import Navbar from './components/navbar';
 
 class App extends Component {
     state = {
@@ -8,7 +11,13 @@ class App extends Component {
     render() {
         return (<div className="App">
             <main role="main" className="container">
-               <Movies/>
+                <Navbar />
+                <div className="content mt-2">
+                    <Switch>
+                        <Route path="/movies" component={Movies}/>
+                        <Route path="/" component={Home}/>
+                    </Switch>
+                </div>
             </main>
         </div>);
     }
