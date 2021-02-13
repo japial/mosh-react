@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-
-import Counters from './components/counter/counters';
-import Navbar from './components/counter/navbar';
+import Counters from './counter/counters';
+import CountNav from './counter/countnav';
 
 class CounterApp extends Component {
     state = {
@@ -44,9 +42,8 @@ class CounterApp extends Component {
         this.setState({ counters });
     };
     render() {
-        return (<div className="App">
-            <Navbar totalCounters={this.state.counters.filter( c => c.value !== 0 ).length} />
-            <main role="main" className="container">
+        return (<div className="row">
+            <div className="col-6 mx-auto">
                 <Counters
                     counters={this.state.counters}
                     onReset={this.handleReset}
@@ -54,7 +51,8 @@ class CounterApp extends Component {
                     onDecrement={this.handleDecrement}
                     onDelete={this.handleDelete}
                 />
-            </main>
+                <CountNav totalCounters={this.state.counters.filter(c => c.value !== 0).length} />
+            </div>
         </div>);
     }
 }
