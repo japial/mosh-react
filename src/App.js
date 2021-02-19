@@ -6,6 +6,7 @@ import CounterApp from './components/counterApp';
 import Movies from './components/movies';
 import Navbar from './components/navbar';
 import MovieForm from './components/movieForm';
+import LoginForm from './components/auth/loginForm';
 
 class App extends Component {
     state = {
@@ -19,6 +20,7 @@ class App extends Component {
                         <Route path="/movies/:id" component={MovieForm}/>
                         <Route path="/movies" component={Movies}/>
                         <Route path="/counter" component={CounterApp}/>
+                        <Route path="/login" component={LoginForm}/>
                         <Route path="/" component={Home}/>
                     </Switch>
                 </div>
